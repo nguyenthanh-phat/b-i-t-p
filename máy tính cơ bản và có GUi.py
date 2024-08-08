@@ -3,15 +3,6 @@ from tkinter import *
 cua_so = Tk()
 
 cua_so.title("Đây là máy tính ko cầm tay đc")
-cua_so.geometry("450x350")
-
-# phần tính toán
-
-
-# phần hiển thị
-label = Label(cua_so, text='', height=2, border=1)
-label.grid(column=1)
-
 
 class NutNhan():
     def __init__(self, text, col, row):
@@ -33,7 +24,9 @@ class NutNhan():
             label.config(text='')
         else:
             label.config(text=current_text + self.text)
-
+# phần hiển thị
+label = Label(cua_so, text='', height=2, border=1)
+label.grid(column=1)
 
 def create_buttons(root):
     # Danh sách các nút với (text, cột, hàng)
@@ -47,7 +40,6 @@ def create_buttons(root):
 
     for (text, col, row) in buttons:
         NutNhan(text, col, row)
-
 
 create_buttons(cua_so)
 cua_so.mainloop()
